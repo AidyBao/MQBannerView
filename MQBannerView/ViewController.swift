@@ -9,10 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var bannerView: MQBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        addBannerView()
+    }
+    
+    func addBannerView() {
+        
+        let imgUrls = ["http://pic.qyer.com/public/mobileapp/homebanner/2017/10/09/15075430688640/w800",
+                       "http://pic.qyer.com/ra/img/15064476767054",
+                       "http://pic.qyer.com/public/mobileapp/homebanner/2017/10/09/15075432049166/w800",
+                       "http://pic.qyer.com/public/mobileapp/homebanner/2017/10/10/15076301267252/w800"
+        ]
+        
+        bannerView = MQBannerView.init(frame: CGRect.init(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 146.0))
+        view.addSubview(bannerView)
+        bannerView.loadData(imgUrls)
+        bannerView.block = {(view: MQBannerView, index: Int, urlStr: String) in
+            print(index,urlStr)
+        }
     }
 
     override func didReceiveMemoryWarning() {

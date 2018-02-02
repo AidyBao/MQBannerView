@@ -12,6 +12,8 @@
 		7A37FE2D202451580031812B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A37FE2B202451580031812B /* Main.storyboard */; };
 		7A37FE2F202451580031812B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A37FE2E202451580031812B /* Assets.xcassets */; };
 		7A37FE32202451580031812B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A37FE30202451580031812B /* LaunchScreen.storyboard */; };
+		7A37FE3C202451BD0031812B /* MQBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37FE3A202451BD0031812B /* MQBannerView.swift */; };
+		7A37FE3D202451BD0031812B /* UIView+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37FE3B202451BD0031812B /* UIView+ZX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7A37FE2E202451580031812B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A37FE31202451580031812B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A37FE33202451580031812B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A37FE3A202451BD0031812B /* MQBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQBannerView.swift; sourceTree = "<group>"; };
+		7A37FE3B202451BD0031812B /* UIView+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ZX.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,19 @@
 				7A37FE27202451580031812B /* AppDelegate.swift */,
 				7A37FE29202451580031812B /* ViewController.swift */,
 				7A37FE2B202451580031812B /* Main.storyboard */,
+				7A37FE39202451BD0031812B /* MQBannerView */,
+				7A37FE3B202451BD0031812B /* UIView+ZX.swift */,
 				7A37FE2E202451580031812B /* Assets.xcassets */,
 				7A37FE30202451580031812B /* LaunchScreen.storyboard */,
 				7A37FE33202451580031812B /* Info.plist */,
+			);
+			path = MQBannerView;
+			sourceTree = "<group>";
+		};
+		7A37FE39202451BD0031812B /* MQBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				7A37FE3A202451BD0031812B /* MQBannerView.swift */,
 			);
 			path = MQBannerView;
 			sourceTree = "<group>";
@@ -136,7 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A37FE3D202451BD0031812B /* UIView+ZX.swift in Sources */,
 				7A37FE2A202451580031812B /* ViewController.swift in Sources */,
+				7A37FE3C202451BD0031812B /* MQBannerView.swift in Sources */,
 				7A37FE28202451580031812B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
