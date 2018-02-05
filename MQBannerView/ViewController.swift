@@ -22,8 +22,8 @@ class ViewController: UIViewController {
         
         let imgUrls = ["http://pic.qyer.com/public/mobileapp/homebanner/2017/10/09/15075430688640/w800",
                        "http://pic.qyer.com/ra/img/15064476767054",
-                       "http://pic.qyer.com/public/mobileapp/homebanner/2017/10/09/15075432049166/w800",
-                       "http://pic.qyer.com/public/mobileapp/homebanner/2017/10/10/15076301267252/w800"
+//                       "http://pic.qyer.com/public/mobileapp/homebanner/2017/10/09/15075432049166/w800",
+//                       "http://pic.qyer.com/public/mobileapp/homebanner/2017/10/10/15076301267252/w800"
         ]
         
         bannerView = MQBannerView.init(frame: CGRect.init(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 146.0))

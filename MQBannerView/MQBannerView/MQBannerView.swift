@@ -63,7 +63,7 @@ class MQBannerView: UIView {
     
     var block: MQBannerCompletion?
     private var timer: Timer?
-    public var interval: TimeInterval = 3.0
+    public var interval: TimeInterval = 5.0
     private var totalCount = 0
     private var sliderW: CGFloat = 0.0
     let sliderH: CGFloat = 2.0
@@ -292,7 +292,25 @@ extension MQBannerView: UIScrollViewDelegate {
     func setSliderIndex(_ scrollView: UIScrollView) {
         if imgUrls.count == 0 { return }
         let cellIdx = currentIndex()
-        let sliderIdx = getSliderIdx(index: cellIdx)
+        let sliderIdx = getSliderIdx(index: cellIdx)        
+        
+        var offsetX = scrollView.contentOffset.x - (CGFloat(totalCount) * scrollView.frame.size.width) / 2
+        let maxSwipeSize = CGFloat(imgUrls.count) * collView.frame.width
+        var progress: CGFloat = 999
+        if offsetX < 0 {
+            if offsetX >= -scrollView.frame.size.width{
+                offsetX = CGFloat(sliderIdx) * scrollView.frame.size.width
+            }else if offsetX <= -maxSwipeSize{
+                collView.scrollToItem(at: IndexPath.init(item: Int(totalCount/2), section: 0), at: .left, animated: false)
+            }else{
+                offsetX = maxSwipeSize + offsetX
+            }
+        }else if offsetX >= CGFloat(self.imgUrls.count) * scrollView.frame.size.width{
+            collView.scrollToItem(at: IndexPath.init(item: Int(totalCount/2), section: 0), at: .left, animated: false)
+            
+        }
+        progress = offsetX / scrollView.frame.size.width
+        
         UIView.animate(withDuration: 0.05) {
             self.slider.x = CGFloat(sliderIdx) * self.sliderW
         }
